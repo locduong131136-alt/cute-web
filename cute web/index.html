@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="cats" aria-hidden="true"></div>
+
+  <main class="center">
+    <h1 class="title">Personal Project</h1>
+    <button id="go" class="btn" type="button">Xin hãy bấm vào đây</button>
+  </main>
+
+  <div id="modal" class="overlay" hidden>
+    <div class="window" role="dialog" aria-modal="true" aria-labelledby="pct">
+      <p id="pct" class="pct">0%</p>
+      <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div id="fill" class="fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jumpscare: ẩn sẵn, chỉ hiện khi thanh tải đạt 100% -->
+  <video id="scare" src="assets/video/video.mp4"
+         playsinline preload="auto"
+         disablepictureinpicture disableremoteplayback
+         controlslist="nodownload nofullscreen noremoteplayback"></video>
+  <div id="shield"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
